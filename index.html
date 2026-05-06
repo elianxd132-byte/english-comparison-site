@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>English Comparison Guide</title>
+
+<style>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    background:#f4f7fb;
+    color:#333;
+}
+header{
+    background:#4a90e2;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+nav{
+    background:#2f6fb3;
+    padding:10px;
+    text-align:center;
+}
+nav a{
+    color:white;
+    margin:0 15px;
+    text-decoration:none;
+    font-weight:bold;
+}
+section{
+    max-width:900px;
+    margin:40px auto;
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+}
+h2{ color:#4a90e2; }
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+th,td{
+    border:1px solid #ddd;
+    padding:10px;
+    text-align:center;
+}
+th{ background:#e8f1ff; }
+button{
+    padding:10px 15px;
+    border:none;
+    background:#4a90e2;
+    color:white;
+    border-radius:8px;
+    cursor:pointer;
+    margin-top:10px;
+}
+.quiz-option{
+    display:block;
+    margin:8px 0;
+}
+#result{
+    font-weight:bold;
+    font-size:20px;
+    margin-top:15px;
+}
+footer{
+    text-align:center;
+    padding:20px;
+    color:#777;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>English Comparison Guide: Adjectives & Pronouns</h1>
+<p>Learn how to compare things correctly in English ✨</p>
+</header>
+
+<nav>
+<a href="#adjectives">Adjectives</a>
+<a href="#structures">Structures</a>
+<a href="#pronouns">Pronouns</a>
+<a href="#quiz">Quiz</a>
+</nav>
+
+<section id="adjectives">
+<h2>Comparative & Superlative Adjectives</h2>
+<p>We use comparisons to show differences between things.</p>
+
+<table>
+<tr><th>Type</th><th>Positive</th><th>Comparative</th><th>Superlative</th></tr>
+<tr><td>Short adjective</td><td>tall</td><td>taller</td><td>tallest</td></tr>
+<tr><td>-y ending</td><td>happy</td><td>happier</td><td>happiest</td></tr>
+<tr><td>Long adjective</td><td>beautiful</td><td>more beautiful</td><td>most beautiful</td></tr>
+<tr><td>Irregular</td><td>good</td><td>better</td><td>best</td></tr>
+<tr><td>Irregular</td><td>bad</td><td>worse</td><td>worst</td></tr>
+</table>
+
+<button onclick="showExamples()">Show Example Sentences</button>
+<p id="examples"></p>
+</section>
+
+<section id="structures">
+<h2>Comparison Structures</h2>
+<ul>
+<li><b>as...as:</b> She is as tall as her brother.</li>
+<li><b>not as...as:</b> This test is not as difficult as the last one.</li>
+<li><b>less / least:</b> This movie is less interesting.</li>
+<li><b>more and more:</b> English is becoming more and more important.</li>
+<li><b>the more...the more:</b> The more you study, the more you learn.</li>
+</ul>
+</section>
+
+<section id="pronouns">
+<h2>Comparative Pronouns & Determiners</h2>
+
+<table>
+<tr><th>Word</th><th>Example</th></tr>
+<tr><td>more</td><td>I want more coffee.</td></tr>
+<tr><td>less</td><td>I have less time today.</td></tr>
+<tr><td>fewer</td><td>There are fewer students.</td></tr>
+<tr><td>most</td><td>Most people like music.</td></tr>
+<tr><td>another</td><td>I need another pen.</td></tr>
+<tr><td>others</td><td>Some people stayed, others left.</td></tr>
+<tr><td>one / ones</td><td>This one is better.</td></tr>
+</table>
+
+</section>
+
+<section id="quiz">
+<h2>Mini Quiz 🎯</h2>
+
+<div class="question">
+<p>1) This car is ____ than mine.</p>
+<label class="quiz-option"><input type="radio" name="q1" value="0"> more fast</label>
+<label class="quiz-option"><input type="radio" name="q1" value="1"> faster</label>
+<label class="quiz-option"><input type="radio" name="q1" value="0"> fastest</label>
+</div>
+
+<div class="question">
+<p>2) She is the ____ student in class.</p>
+<label class="quiz-option"><input type="radio" name="q2" value="0"> smart</label>
+<label class="quiz-option"><input type="radio" name="q2" value="1"> smartest</label>
+<label class="quiz-option"><input type="radio" name="q2" value="0"> smarter</label>
+</div>
+
+<div class="question">
+<p>3) I have ____ money than yesterday.</p>
+<label class="quiz-option"><input type="radio" name="q3" value="1"> less</label>
+<label class="quiz-option"><input type="radio" name="q3" value="0"> fewer</label>
+<label class="quiz-option"><input type="radio" name="q3" value="0"> least</label>
+</div>
+
+<button onclick="checkQuiz()">Check Answers</button>
+<p id="result"></p>
+
+</section>
+
+<footer>
+Made for learning English 💙
+</footer>
+
+<script>
+function showExamples(){
+document.getElementById("examples").innerHTML =
+"Today is hotter than yesterday. • This is the best day ever! • My house is bigger than yours.";
+}
+
+function checkQuiz(){
+let score=0;
+let answers=document.querySelectorAll("input[type='radio']:checked");
+answers.forEach(a=> score += Number(a.value));
+document.getElementById("result").innerHTML="Your score: "+score+"/3";
+}
+</script>
+
+</body>
+</html>
